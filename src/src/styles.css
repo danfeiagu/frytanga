@@ -1,0 +1,15 @@
+body{font-family:system-ui,Segoe UI,Arial;margin:0;background:#f7f7fb;color:#111}
+.app{max-width:980px;margin:24px auto;padding:20px;background:#fff;border-radius:12px;box-shadow:0 6px 30px rgba(0,0,0,.06)}
+header h1{margin:0;font-size:22px}
+.tag{color:#666}
+.controls form{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0}
+.controls label{display:flex;flex-direction:column;font-size:14px}
+.actions{display:flex;gap:8px;align-items:flex-end}
+.results ul{list-style:none;padding:0}
+.rec{padding:12px;border-top:1px solid #eee}
+.chat-box{height:240px;overflow:auto;border:1px solid #eee;padding:8px;border-radius:8px;background:#fafafa}
+.bubble{margin:6px 0;padding:8px;border-radius:8px;max-width:75%}
+.bubble.user{background:#dbeafe;align-self:flex-end}
+.bubble.bot{background:#eef2ff}
+.chat-controls{display:flex;gap:8px;margin-top:8px}
+.chat-controls input{flex:1;padding:8px}
