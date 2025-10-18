@@ -1,0 +1,227 @@
+/* 🎥 Estilo inspirado en Taste.io - versión ligera */
+
+:root {
+  --bg: #0e1015;
+  --bg-card: #1a1d24;
+  --text: #f0f0f0;
+  --text-muted: #9da3af;
+  --accent: #5b8ef0;
+  --accent-hover: #7da5ff;
+  --border: #2a2d34;
+  --radius: 12px;
+  --shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 24px;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+  color: var(--accent);
+}
+
+header .tag {
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+/* FORMULARIO */
+.controls form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.controls label {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.controls select {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px;
+  margin-top: 4px;
+}
+
+.actions {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: var(--accent-hover);
+}
+
+button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+/* RECOMENDACIONES */
+.results {
+  margin-top: 30px;
+}
+
+.results h2 {
+  text-align: center;
+  color: var(--accent);
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.results ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.rec {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.rec:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.rec h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.rec small {
+  color: var(--text-muted);
+  font-weight: normal;
+}
+
+.synopsis {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.why {
+  font-size: 14px;
+  margin-top: 8px;
+  color: #ddd;
+}
+
+.rec a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.rec a:hover {
+  text-decoration: underline;
+}
+
+/* CHAT */
+.chat {
+  margin-top: 40px;
+}
+
+.chat h2 {
+  color: var(--accent);
+  text-align: center;
+}
+
+.chat-box {
+  height: 260px;
+  overflow-y: auto;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bubble {
+  padding: 10px 14px;
+  margin: 6px 0;
+  border-radius: var(--radius);
+  max-width: 75%;
+  line-height: 1.4;
+  box-shadow: var(--shadow);
+}
+
+.bubble.user {
+  background: var(--accent);
+  color: #fff;
+  align-self: flex-end;
+}
+
+.bubble.bot {
+  background: #242730;
+  color: var(--text);
+  align-self: flex-start;
+}
+
+.chat-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-controls input {
+  flex: 1;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
